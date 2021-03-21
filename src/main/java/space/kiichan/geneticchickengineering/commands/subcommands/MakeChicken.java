@@ -31,7 +31,7 @@ public class MakeChicken extends Subcommand {
     public MakeChicken(GeneticChickengineering plugin, Commands commands, String permissionName) {
         super(plugin, commands, permissionName);
         this.setName("makechicken");
-        this.setHelp("Usage: /gce makechicken <dna>");
+        this.setHelp("用法: /gce makechicken <dna>");
         this.commands.register(this);
     }
 

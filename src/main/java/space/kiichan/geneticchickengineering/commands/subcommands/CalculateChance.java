@@ -31,7 +31,7 @@ public class CalculateChance extends Subcommand {
     public CalculateChance(GeneticChickengineering plugin, Commands commands, String permissionName) {
         super(plugin, commands, permissionName);
         this.setName("calculatechance");
-        this.setHelp("Usage: /gce calculatechance <parent DNA> <parent DNA> <child DNA>");
+        this.setHelp("用法: /gce calculatechance <亲代 DNA> <亲代 DNA> <子一代 DNA>");
         this.commands.register(this);
     }
 
@@ -45,7 +45,7 @@ public class CalculateChance extends Subcommand {
         for (int i=0; i<3; i++) {
             notations[i] = args[args.length-3+i];
             if (!DNA.isValidSequence(notations[i])) {
-                sender.sendMessage("DNA notation invalid for "+notations[i]);
+                sender.sendMessage("DNA序列 "+notations[i]+" 无效");
                 return true;
             }
         }
@@ -70,13 +70,13 @@ public class CalculateChance extends Subcommand {
                 chanceTotal = chanceTotal * (matches*0.25);
             }
             long readableChance = Math.round(chanceTotal*100);
-            String message = "There is a "+readableChance+"% chance ";
+            String message = "有 "+readableChance+"% 几率 ";
             if (chanceTotal > 0 && chanceTotal < 100) {
-                message = message + "(roughly 1 in "+Math.round(1/chanceTotal)+" odds) ";
+                message = message + "(大概有 "+Math.round(1/chanceTotal)+"分之1 的几率) ";
             }
-            message = message + "that ("+p1dna.toString()+
-                ") and ("+p2dna.toString()+") will produce a ("+cdna.toString()+
-                ") child";
+            message = message + " ("+p1dna.toString()+
+                ") 和 ("+p2dna.toString()+") 将产出一个 ("+cdna.toString()+
+                ") 的孩子";
             sender.sendMessage(message);
         } else {
             sender.sendMessage("Command must be executed by a player with permission");

@@ -47,7 +47,7 @@ public class PrivateCoop extends AContainer {
     protected void tick(Block b) {
         super.tick(b);
         if (isProcessing(b)) {
-            if (Math.random() < 0.25) {
+            if (Math.random() < 0.1) {
                 Location l = b.getLocation().toCenterLocation();
                 l.getWorld().spawnParticle(Particle.HEART, l.add(0,0.5,0), 2, 0.2, 0, 0.2);
             }

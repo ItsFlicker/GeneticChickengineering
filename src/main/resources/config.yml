@@ -1,5 +1,5 @@
 options:
-  auto-update: true
+  auto-update: false
   # Should custom names be used to show resources
   display-resource-in-name: true
   # The max number of heterozygous genes a newly converted chicken can generate, from 1-6
@@ -7,11 +7,11 @@ options:
   # The percent chance that a newly converted chicken will have any recessive alleles
   mutation-rate: 50
   # The percent chance that a chicken will produce an egg instead of a resource
-  resource-fail-rate: 0
+  resource-fail-rate: 32
   # The base time for resource generation, from 14-100
   resource-base-time: 14
   # Should the machines hurt the chickens (This enables the Restoration Chamber)
-  enable-pain: false
+  enable-pain: true
   # The percent chance that a chicken will be hurt by a machine (other than the Restoration Chamber)
   # This check happens once every 0.5 seconds, so low values will be best here
   # The default, 2% will give chickens an average of 6 minutes before exhausted
@@ -19,7 +19,7 @@ options:
   # Does a chicken die if too hurt (otherwise prevents machine from working)
   pain-kills: false
   # The time it should take the Restoration Chamber to restore 0.25 of a chicken's health
-  heal-rate: 2
+  heal-rate: 5
 commands:
   # Should commands be enabled
   enabled: true

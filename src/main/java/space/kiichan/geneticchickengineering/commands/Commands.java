@@ -24,7 +24,7 @@ public class Commands {
         this.plugin = plugin;
         this.base = this.plugin.getCommand("geneticchickengineering");
         if (this.base == null) {
-            this.plugin.log.severe("Commands failed to initialize");
+            this.plugin.log.severe("命令初始化失败");
             return;
         }
 

@@ -18,7 +18,7 @@ commands:
     geneticchickengineering:
         aliases: gce
         description: GCE base command
-        usage: "Usage: /<command> <subcommand> [arguments]"
+        usage: "用法: /<command> <subcommand> [arguments]"
 permissions:
   geneticchickengineering.command.makechicken:
     description: Allows a player to make Pocket Chickens with commands
